@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+.env
+.env.db
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Docker
+docker/postgres/data/
+
+# Session
+.epic_events_session
