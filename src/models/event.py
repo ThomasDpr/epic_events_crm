@@ -12,14 +12,12 @@ class Event(Base):
 
     id = Column(Integer, primary_key=True)
     
-    # Relations
     contract_id = Column(Integer, ForeignKey('contracts.id'), nullable=False)
     contract = relationship("Contract", back_populates="events")
     
-    support_contact_id = Column(Integer, ForeignKey('users.id'), nullable=True)  # Nullable car assigné plus tard
+    support_contact_id = Column(Integer, ForeignKey('users.id'), nullable=True) 
     support_contact = relationship("User", back_populates="supported_events")
     
-    # Informations de l'événement
     event_start_date = Column(DateTime, nullable=False)
     event_end_date = Column(DateTime, nullable=False)
     location = Column(String, nullable=False)
