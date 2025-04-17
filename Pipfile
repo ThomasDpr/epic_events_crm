@@ -10,6 +10,11 @@ python-dotenv = "*"
 click = "*"
 alembic = "*"
 bcrypt = "*"
+inquirerpy = "*"
+pyjwt = "*"
+sentry-sdk = "*"
+rich = "*"
+pytest = "*"
 
 [dev-packages]
 
