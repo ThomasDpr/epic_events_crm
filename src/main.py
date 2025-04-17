@@ -1,23 +1,17 @@
-import click
+import sys
 
-from database.config import init_db
-from views.auth import auth
-from views.client import client
+from app import EpicEvents
 
 
-@click.group()
-def cli():
-    """Application de gestion CRM Epic Events"""
-    pass
-
-@cli.command()
-def init():
-    """Initialiser la base de données"""
-    init_db()
-    click.echo("Base de données initialisée!")
-
-cli.add_command(auth)
-cli.add_command(client)
+def main():
+    app = EpicEvents()
+    try:
+        app.start()
+    except KeyboardInterrupt:
+        app.exit()
+    except Exception as e:
+        print(f"Une erreur inattendue s'est produite: {str(e)}")
+        sys.exit(1)
 
 if __name__ == "__main__":
-    cli()
+    main()
