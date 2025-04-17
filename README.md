@@ -9,6 +9,7 @@ Une application CRM en ligne de commande pour gérer les clients, contrats et é
 - [Lancer l'application](#lancer-lapplication)
 - [Fonctionnalités](#fonctionnalités)
 - [Structure du projet](#structure-du-projet)
+- [Schéma de la base de données](#schéma-de-la-base-de-données)
 
 ## Présentation
 
@@ -107,3 +108,9 @@ epic_events_crm/
     ├── utils/                  # Utilitaires divers
     └── views/                  # Vues et interfaces utilisateur
 ```
+
+## Schéma de la base de données
+
+Voici le schéma relationnel de la base de données, montrant les principales entités et leurs relations :
+
+![Schéma de la base de données](CRM.png)
